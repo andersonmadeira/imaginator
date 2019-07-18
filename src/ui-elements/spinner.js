@@ -9,12 +9,12 @@ const spin = keyframes`
 const Spinner = ({ className }) => <div className={className}></div>
 
 const SpinnerStyled = styled(Spinner)`
-    border: 8px solid #f3f3f3;
+    border: ${props => props.theme.width || 4}px solid ${props => props.theme.secondaryColor || '#f3f3f3'};
     border-radius: 50%;
-    border-top: 8px solid #3498db;
-    width: 60px;
-    height: 60px;
-    animation: ${spin} 2s linear infinite;
+    border-top: ${props => props.theme.width || 4}px solid ${props => props.theme.primaryColor || '#3498db'};
+    width: ${props => props.theme.size || 40}px;
+    height: ${props => props.theme.size || 40}px;
+    animation: ${spin} ${props => props.theme.speed || 2}s linear infinite;
 `
 
-export default SpinnerStyled; 
+export default SpinnerStyled

@@ -4,7 +4,7 @@ import Spinner from './ui-elements/spinner'
 const App = () => {
   return (
     <div>
-      <Spinner />
+      <Spinner theme={{ speed: 1 }} />
     </div>
   );
 }
